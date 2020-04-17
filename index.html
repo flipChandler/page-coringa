@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker | Landing Page UI Design</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <div class="toggle"><img src="img/toggle.png" alt="toggle"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>Isolated, intimidated and disregarded by society, the failed comedian Arthur Fleck starts his
+                 way as a criminal mind after murdering three men in the middle of the subway. His action starts
+                  a popular movement against the elite of Gotham City, of which Thomas Wayne is its big shot.</p>
+                 <a href="#" class="play" onclick="toggle();"><img src="img/play.png" alt="play" />Watch trailer</a>
+                 <div class="slide"></div>
+                 <ul class="sci">
+                     <li><a href="https://www.facebook.com/jokermovie/" target="_blank"><img src="img/facebook.png" alt=""/></a></li>
+                     <li><a href="https://twitter.com/jokermovie" target="_blank"><img src="img/twitter.png" alt=""/></a></li>
+                     <li><a href="https://www.instagram.com/jokermovie" target="_blank"><img src="img/instagram.png" alt="" /></a></li>
+                 </ul>
+                 <div class="footer">
+                     <p>&copy;Felipe Santos</p>
+                 </div>
+                
+        </div>
+        
+    </div>
+    <div class="trailer">
+        <video src="trailer.mp4" controls="true"></video>
+        <img src="img/close.png" alt="" class="close" onclick="toggle();"/>        
+    </div>
+    
+    <script>
+        function toggle() {
+            let trailer = document.querySelector('.trailer');
+            let video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+
+    </script>
+</body>
+</html>
